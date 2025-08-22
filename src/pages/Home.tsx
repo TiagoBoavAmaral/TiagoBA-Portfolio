@@ -1,5 +1,6 @@
 import profilePhoto from "@/assets/profile-photo.jpg";
 import codingGif from "@/assets/coding-background.gif";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import {
   Github,
@@ -11,8 +12,42 @@ import {
   Server,
   Database,
 } from "lucide-react";
+import { ToggleGroup, ToggleGroupItem } from "../components/ui/toggle-group";
 
 const Home = () => {
+  const [language, setLanguage] = useState("pt"); // 'pt' for Portuguese, 'en' for English
+
+  const translations = {
+    pt: {
+      subtitle: "Estudante de Engenharia de Software",
+      greeting:
+        "Olá! Meu nome é Tiago, tenho 19 anos e atualmente moro em Belo Horizonte, Minas Gerais. Sou estudante de Engenharia de Software na PUC Minas e estou cursando o quarto período. Tenho grande interesse na área de tecnologia e estou me dedicando aos estudos de programação para desenvolver minhas habilidades e construir uma carreira sólida na área.",
+      motivation:
+        "Tenho buscado constantemente novos conhecimentos, sempre explorando ferramentas e linguagens que me ajudem a evoluir como desenvolvedor.",
+      location: "Belo Horizonte, Brasil",
+      specialtiesTitle: "Especialidades",
+      frontend: "Frontend",
+      backend: "Backend",
+      tools: "Ferramentas",
+      design: "Design",
+    },
+    en: {
+      subtitle: "Software Engineering Student",
+      greeting:
+        "Hello! My name is Tiago, I'm 19 years old and I currently live in Belo Horizonte, Minas Gerais, Brazil. I am a Software Engineering student at PUC Minas, currently in my fourth semester. I have a great interest in technology and I am dedicating myself to programming studies to develop my skills and build a solid career in the area.",
+      motivation:
+        "I am constantly seeking new knowledge, always exploring tools and languages that help me evolve as a developer.",
+      location: "Belo Horizonte, Brazil",
+      specialtiesTitle: "Specialties",
+      frontend: "Frontend",
+      backend: "Backend",
+      tools: "Tools",
+      design: "Design",
+    },
+  };
+
+  const t = translations[language];
+
   const socialLinks = [
     {
       name: "LinkedIn",
@@ -46,25 +81,29 @@ const Home = () => {
                   Tiago Boaventura
                 </h1>
                 <h2 className="text-2xl lg:text-3xl bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent font-semibold mb-6">
-                  Estudante de Engenharia de Software
+                  {t.subtitle}
                 </h2>
+                <ToggleGroup
+                  type="single"
+                  value={language}
+                  onValueChange={(value) => value && setLanguage(value)}
+                  className="mt-4 justify-start"
+                >
+                  <ToggleGroupItem value="pt">PT</ToggleGroupItem>
+                  <ToggleGroupItem value="en">EN</ToggleGroupItem>
+                </ToggleGroup>
               </div>
 
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                Olá! Meu nome é Tiago, tenho 19 anos e atualmente moro em Belo Horizonte, Minas Gerais.
-                Sou estudante de Engenharia de Software na PUC Minas e estou cursando o quarto período. Tenho grande interesse na área de tecnologia e estou me dedicando aos estudos de programação para desenvolver minhas habilidades e construir uma carreira sólida na área.
-                </p>
+                <p>{t.greeting}</p>
 
-                <p>
-                Tenho buscado constantemente novos conhecimentos, sempre explorando ferramentas e linguagens que me ajudem a evoluir como desenvolvedor.
-                </p>
+                <p>{t.motivation}</p>
               </div>
 
               {/* Location */}
               <div className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary" />
-                <span>Belo Horizonte, Brasil</span>
+                <span>{t.location}</span>
               </div>
 
               {/* Social Links */}
@@ -108,7 +147,7 @@ const Home = () => {
             <div className="text-center">
               <h2 className="text-4xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                  Especialidades
+                  {t.specialtiesTitle}
                 </span>
               </h2>
               <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent mx-auto"></div>
@@ -118,7 +157,9 @@ const Home = () => {
               <div className="bg-card/30 backdrop-blur-sm rounded-xl p-6 border border-border/20 hover:shadow-soft transition-all duration-300 hover:scale-105">
                 <div className="flex items-center gap-3 mb-3">
                   <Code className="w-6 h-6 text-primary" />
-                  <h4 className="text-lg font-medium text-primary">Frontend</h4>
+                  <h4 className="text-lg font-medium text-primary">
+                    {t.frontend}
+                  </h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
                   React, TypeScript, Next.js, Tailwind CSS
@@ -128,7 +169,9 @@ const Home = () => {
               <div className="bg-card/30 backdrop-blur-sm rounded-xl p-6 border border-border/20 hover:shadow-soft transition-all duration-300 hover:scale-105">
                 <div className="flex items-center gap-3 mb-3">
                   <Server className="w-6 h-6 text-accent" />
-                  <h4 className="text-lg font-medium text-accent">Backend</h4>
+                  <h4 className="text-lg font-medium text-accent">
+                    {t.backend}
+                  </h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
                   Node.js, Python, Java, SQLite, C.
@@ -139,7 +182,7 @@ const Home = () => {
                 <div className="flex items-center gap-3 mb-3">
                   <Database className="w-6 h-6 text-primary" />
                   <h4 className="text-lg font-medium text-primary">
-                    Ferramentas
+                    {t.tools}
                   </h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
@@ -150,7 +193,9 @@ const Home = () => {
               <div className="bg-card/30 backdrop-blur-sm rounded-xl p-6 border border-border/20 hover:shadow-soft transition-all duration-300 hover:scale-105">
                 <div className="flex items-center gap-3 mb-3">
                   <Palette className="w-6 h-6 text-accent" />
-                  <h4 className="text-lg font-medium text-accent">Design</h4>
+                  <h4 className="text-lg font-medium text-accent">
+                    {t.design}
+                  </h4>
                 </div>
                 <p className="text-muted-foreground text-sm">
                   UI/UX, Figma, Design Systems
