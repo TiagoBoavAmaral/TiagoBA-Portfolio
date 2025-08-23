@@ -30,7 +30,7 @@ const Projects = () => {
     {
       title: "Pluszzle",
       description:
-        "um site de jogos diários em português, trazendo desafios como Cruzadinha, Descubra a Palavra e Sudoku.",
+        "Um site de jogos diários em português, trazendo desafios como Cruzadinha, Descubra a Palavra e Sudoku.",
       image: "/figmas/pluszzle.png",
       technologies: ["TypeScript", "Next.js", "React", "Node.js"],
       github: "https://github.com/TiagoBoavAmaral/pluszzle.git",
@@ -56,7 +56,7 @@ const Projects = () => {
         {/* Featured Projects */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold mb-8 text-center text-primary">
-            Projetos em Destaque
+            Projetos
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProjects.map((project, index) => (
