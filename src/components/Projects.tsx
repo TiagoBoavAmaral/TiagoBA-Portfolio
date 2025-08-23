@@ -28,12 +28,12 @@ const Projects = () => {
     },
 
     {
-      title: "Portfolio Pessoal",
+      title: "Pluszzle",
       description:
-        "Website de um portfólio pessoal responsivo e com animações suaves.",
-      image: "/figmas/home.png",
-      technologies: ["TypeScript", "TailwindCSS", "React", "Vite"],
-      github: "https://github.com/TiagoBoavAmaral/TiagoBA-Portfolio.git",
+        "um site de jogos diários em português, trazendo desafios como Cruzadinha, Descubra a Palavra e Sudoku.",
+      image: "/figmas/pluszzle.png",
+      technologies: ["TypeScript", "Next.js", "React", "Node.js"],
+      github: "https://github.com/TiagoBoavAmaral/pluszzle.git",
       featured: true,
     },
   ];
