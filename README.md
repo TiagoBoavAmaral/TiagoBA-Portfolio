@@ -9,7 +9,6 @@ Este projeto foi construído com as seguintes tecnologias:
 - **Vite**: Um empacotador de módulos e ferramenta de desenvolvimento para projetos web modernos.
 - **TypeScript**: Um superconjunto tipado de JavaScript que compila para JavaScript puro.
 - **React**: Uma biblioteca JavaScript para construir interfaces de usuário.
-- **shadcn-ui**: Uma coleção de componentes de UI reusáveis construídos com Radix UI e Tailwind CSS.
 - **Tailwind CSS**: Um framework CSS utilitário para construir designs rapidamente.
 
 ## Dependências e Bibliotecas/Frameworks
