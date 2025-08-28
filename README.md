@@ -113,6 +113,8 @@ Para configurar e executar o projeto localmente, siga os passos abaixo:
 
 ## Wireframes
 
+[Link Figma](https://www.figma.com/design/aWBLO0Z1uCd08wMGifIPhc/Figma-Portfolio?m=auto&t=jqSe0EKxzGED7ETT-6)
+
 **Home:**
 
 ![Home](figmas/home.png)
