@@ -9,7 +9,7 @@ const Projects = () => {
       title: "AutoGest",
       description:
         "Software para otimizar a gestão de uma autoescola, englobando cadastros de alunos, veículos e instrutores além do controle de aulas.",
-      image: "src/assets/autogest.png",
+      image: "/autogest.png",
       technologies: ["React", "TailwindCSS", "SQLite", "Express"],
       github:
         "https://github.com/ICEI-PUC-Minas-PMGES-TI/ProjetoReal-AutoEscola",
@@ -20,7 +20,7 @@ const Projects = () => {
       title: "QuickStock",
       description:
         "Sistema para melhorar os processos de gestão de estoque em pequenas empresas, proporcionando uma solução eficiente que minimize desperdícios e garanta a disponibilidade de produtos.",
-      image: "src/assets/quickstock.png",
+      image: "/quickstock.png",
       technologies: ["React", "Node.js", "SQLite", "TypeScript"],
       github:
         "https://github.com/ICEI-PUC-Minas-PMGES-TI/pmg-es-2024-2-ti2-3687100-quickstock.git",
