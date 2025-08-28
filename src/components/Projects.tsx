@@ -31,7 +31,7 @@ const Projects = () => {
       title: "Pluszzle",
       description:
         "Um site de jogos diários em português, trazendo desafios como Cruzadinha, Descubra a Palavra e Sudoku.",
-      image: "./figmas/pluszzle.png",
+      image: "/figmas/pluszzle.png",
       technologies: ["TypeScript", "Next.js", "React", "Node.js"],
       github: "https://github.com/TiagoBoavAmaral/pluszzle.git",
       featured: true,
