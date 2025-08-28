@@ -2,6 +2,12 @@
 
 Este é um projeto de portfólio desenvolvido para o Laboratório de Desenvolvimento de Software.
 
+## Link de Acesso para o Site Publicado na Nuvem
+
+O site está publicado e pode ser acessado através do seguinte link:
+
+[Tiago Boaventura Amaral - Portfólio Online](https://tiago-ba-portfolio.vercel.app/)
+
 ## Tecnologias Utilizadas
 
 Este projeto foi construído com as seguintes tecnologias:
@@ -104,11 +110,6 @@ Para configurar e executar o projeto localmente, siga os passos abaixo:
 
     Isso irá gerar os arquivos estáticos na pasta `dist/`.
 
-## Link de Acesso para o Site Publicado na Nuvem
-
-O site está publicado e pode ser acessado através do seguinte link:
-
-[Tiago Boaventura Amaral - Portfólio Online](https://tiago-ba-portfolio.vercel.app/)
 
 ## Wireframes
 
