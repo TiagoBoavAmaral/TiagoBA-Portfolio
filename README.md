@@ -109,7 +109,7 @@ Para configurar e executar o projeto localmente, siga os passos abaixo:
 
 O site está publicado e pode ser acessado através do seguinte link:
 
-[Tiago Boaventura Amaral - Portfólio Online](https://tiagoba-portfolio.vercel.app)
+[Tiago Boaventura Amaral - Portfólio Online](https://tiago-ba-portfolio.vercel.app/)
 
 ## Wireframes
 
